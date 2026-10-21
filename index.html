@@ -284,8 +284,8 @@
   <!-- Interactive HTML5 Canvas: Cherry Blossom Petals & Sparkles Background -->
   <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0 w-full h-full"></canvas>
 
-  <!-- Background Music Audio Element -->
-  <audio id="bgAudio" loop preload="auto" src="./assets/music.mp3?v=20261021_tanglop"></audio>
+  <!-- Background Music Audio Element (APT. - ROSÉ & Bruno Mars) -->
+  <audio id="bgAudio" loop preload="auto" src="./assets/music.mp3?v=20261021_apt_rose"></audio>
 
   <!-- Sticky Top Navigation Bar -->
   <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-rose-100 shadow-sm transition-all duration-300">
@@ -325,14 +325,9 @@
             <span class="equalizer-bar"></span>
           </div>
 
-          <span id="musicStatusText" class="hidden sm:inline font-medium">Bật Nhạc 🎵</span>
+          <span id="musicStatusText" class="font-medium">APT. • ROSÉ 🎵</span>
         </button>
 
-        <!-- Quick Heart Counter Preview -->
-        <a href="#collegeWidgets" class="hidden md:flex items-center gap-1.5 bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all">
-          <i class="fa-solid fa-heart animate-pulse text-amber-200"></i>
-          <span id="navHeartCount">20,100</span> Tim
-        </a>
       </div>
 
     </div>
@@ -342,18 +337,8 @@
   <main class="relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-12">
 
     <!-- ==================== HERO SECTION ==================== -->
-    <section class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+    <section class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
       
-      <!-- Celebration Pill Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-100 via-pink-100 to-amber-100 border border-rose-300/70 text-rose-700 text-xs sm:text-sm font-bold shadow-sm mb-6 animate-bounce-gentle">
-        <span class="flex h-2 w-2 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
-        </span>
-        🎓 20 Tháng 10 • Kính Tặng 47 Bông Hoa Tân Sinh Viên
-        <span class="text-amber-500">✨</span>
-      </div>
-
       <!-- Main Grand Typography Heading -->
       <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
         Chúc Mừng Ngày <br class="hidden sm:inline" />
@@ -363,58 +348,10 @@
       </h1>
 
       <!-- Warm Freshman Class Subtitle -->
-      <p class="font-sans text-gray-600 text-base sm:text-lg sm:leading-relaxed max-w-2xl mx-auto mb-8 font-medium">
+      <p class="font-sans text-gray-600 text-base sm:text-lg sm:leading-relaxed max-w-2xl mx-auto font-medium">
         Món quà đặc biệt từ <span class="text-rose-600 font-bold">tập thể các bạn nam</span> gửi tặng 47 cô gái tài năng, xinh đẹp của lớp mình. 
         Chúc các bạn một thời thanh xuân đại học rạng rỡ, kỳ đầu suôn sẻ, qua môn A+ và luôn ngập tràn niềm vui! 🌸
       </p>
-
-      <!-- Hero Audio Vinyl Player Banner -->
-      <div class="inline-block w-full max-w-md card-glass rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all">
-        <div class="flex items-center justify-between gap-4">
-          
-          <div class="flex items-center gap-3.5 text-left">
-            <!-- Vinyl Disc & Mechanical Tonearm Stage -->
-            <div class="relative w-14 h-14 flex items-center justify-center">
-              <!-- Vinyl Disc Graphic -->
-              <div id="heroVinylDisc" class="w-12 h-12 rounded-full bg-gradient-to-tr from-gray-950 via-gray-800 to-gray-900 border-2 border-amber-300 flex items-center justify-center relative shadow-md">
-                <!-- Vinyl Grooves -->
-                <div class="absolute inset-1 rounded-full border border-gray-700 opacity-60"></div>
-                <div class="absolute inset-2.5 rounded-full border border-gray-700 opacity-60"></div>
-                <!-- Vinyl Center -->
-                <div class="w-4 h-4 rounded-full bg-rose-500 border border-white flex items-center justify-center">
-                  <div class="w-1 h-1 rounded-full bg-white"></div>
-                </div>
-              </div>
-
-              <!-- Turntable Tonearm (Pivots smoothly on play/pause) -->
-              <div id="heroTonearm" class="tonearm">
-                <svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Pivot base -->
-                  <circle cx="21" cy="5" r="4" fill="#fbbf24" stroke="#b45309" stroke-width="1.2"/>
-                  <!-- Metallic arm -->
-                  <path d="M21 5 L13 18 L11 25" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
-                  <!-- Cartridge needle head -->
-                  <rect x="7" y="24" width="5" height="7" rx="1.5" fill="#e11d48" stroke="#881337" stroke-width="0.8" transform="rotate(-15 7 24)"/>
-                </svg>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex items-center gap-1.5">
-                <span class="text-[10px] uppercase tracking-wider font-extrabold text-rose-600 bg-rose-100/80 px-2 py-0.5 rounded-full">Nhạc Nền Thanh Xuân</span>
-              </div>
-              <p class="font-serif font-bold text-gray-900 text-sm mt-0.5">Giai Điệu 20/10 Rực Rỡ 🎵</p>
-              <span class="text-[11px] text-gray-500 font-medium">Chạm để nghe giai điệu Acoustic</span>
-            </div>
-          </div>
-
-          <!-- Hero Play/Pause Toggle Button with Shimmer -->
-          <button id="heroPlayBtn" class="btn-shimmer w-11 h-11 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-all" aria-label="Phát nhạc">
-            <i id="heroPlayIcon" class="fa-solid fa-play ml-0.5 text-base"></i>
-          </button>
-
-        </div>
-      </div>
 
     </section>
 
@@ -1040,18 +977,22 @@
           musicStatusText.textContent = 'Dừng Nhạc ⏸️';
           equalizerVisual.classList.remove('equalizer-paused');
           vinylIcon.classList.add('animate-spin-slow');
-          heroVinylDisc.classList.add('animate-spin-slow');
+          if (heroVinylDisc) heroVinylDisc.classList.add('animate-spin-slow');
           if (heroTonearm) heroTonearm.classList.add('tonearm-playing');
-          heroPlayIcon.classList.remove('fa-play');
-          heroPlayIcon.classList.add('fa-pause');
+          if (heroPlayIcon) {
+            heroPlayIcon.classList.remove('fa-play');
+            heroPlayIcon.classList.add('fa-pause');
+          }
         } else {
-          musicStatusText.textContent = 'Bật Nhạc 🎵';
+          musicStatusText.textContent = 'APT. • ROSÉ 🎵';
           equalizerVisual.classList.add('equalizer-paused');
           vinylIcon.classList.remove('animate-spin-slow');
-          heroVinylDisc.classList.remove('animate-spin-slow');
+          if (heroVinylDisc) heroVinylDisc.classList.remove('animate-spin-slow');
           if (heroTonearm) heroTonearm.classList.remove('tonearm-playing');
-          heroPlayIcon.classList.remove('fa-pause');
-          heroPlayIcon.classList.add('fa-play');
+          if (heroPlayIcon) {
+            heroPlayIcon.classList.remove('fa-pause');
+            heroPlayIcon.classList.add('fa-play');
+          }
         }
       }
 
@@ -1060,7 +1001,7 @@
         if (bgAudio.paused) {
           bgAudio.play().then(() => {
             updateMusicUI(true);
-            showToast('Đang phát giai điệu thanh xuân 20/10 🎵', '🎶');
+            showToast('Đang phát: APT. - ROSÉ & Bruno Mars 🔥🎵', '🎶');
           }).catch(err => {
             console.log('Autoplay prevented:', err);
           });
@@ -1073,14 +1014,37 @@
       if (toggleMusicBtn) toggleMusicBtn.addEventListener('click', toggleBackgroundMusic);
       if (heroPlayBtn) heroPlayBtn.addEventListener('click', toggleBackgroundMusic);
 
-      // User first gesture auto-unlock for audio
-      function unlockAudioOnFirstGesture() {
+      // --- AUTOMATIC INSTANT MUSIC AUTOPLAY ---
+      function triggerInstantMusicPlay() {
+        if (!bgAudio || !bgAudio.paused) return;
         getAudioContext();
-        window.removeEventListener('click', unlockAudioOnFirstGesture);
-        window.removeEventListener('touchstart', unlockAudioOnFirstGesture);
+        bgAudio.play().then(() => {
+          updateMusicUI(true);
+          showToast('Đang phát: APT. - ROSÉ & Bruno Mars 🔥🎵', '🎶');
+        }).catch(() => {
+          // If browser policy intercepted un-interacted play, listen to the very first gesture anywhere
+          const triggerEvents = ['click', 'pointerdown', 'touchstart', 'scroll', 'keydown'];
+          const onFirstInteraction = () => {
+            getAudioContext();
+            if (bgAudio && bgAudio.paused) {
+              bgAudio.play().then(() => {
+                updateMusicUI(true);
+                showToast('Đang phát: APT. - ROSÉ & Bruno Mars 🔥🎵', '🎶');
+              }).catch(() => {});
+            }
+            triggerEvents.forEach(evt => window.removeEventListener(evt, onFirstInteraction, { capture: true }));
+          };
+          triggerEvents.forEach(evt => window.addEventListener(evt, onFirstInteraction, { capture: true, once: true }));
+        });
       }
-      window.addEventListener('click', unlockAudioOnFirstGesture, { once: true });
-      window.addEventListener('touchstart', unlockAudioOnFirstGesture, { once: true });
+
+      // Try autoplay immediately on script load, DOMContentLoaded, and window load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', triggerInstantMusicPlay);
+      } else {
+        triggerInstantMusicPlay();
+      }
+      window.addEventListener('load', triggerInstantMusicPlay);
 
       // --- 6. HTML5 CANVAS: SAKURA PETALS & GOLDEN SPARKLES ---
       (function initCanvasParticles() {
