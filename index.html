@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>20/10 • Kính Tặng 47 Bông Hoa Tân Sinh Viên 🎓🌸</title>
+  <title>Khu Vườn 47 Đóa Hoa Tân Sinh Viên 🌸 • Chúc Mừng 20/10</title>
   
   <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="Chúc Mừng 20/10 • Tập Thể 47 Bông Hoa Tân Sinh Viên 🎓🌸">
-  <meta property="og:description" content="Món quà đặc biệt từ tập thể các bạn nam gửi tặng 47 cô gái tài năng, xinh đẹp của lớp mình. Chúc các bạn GPA 4.0 và thanh xuân rực rỡ!">
+  <meta property="og:title" content="Khu Vườn 47 Đóa Hoa Tân Sinh Viên 🌸 • Chúc Mừng 20/10">
+  <meta property="og:description" content="Chào mừng bạn bước vào Khu Vườn Thanh Xuân 20/10 — Nơi khoe sắc của 47 đóa hoa rạng ngời từ tập thể các bạn nam!">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1200&auto=format&fit=crop">
 
@@ -78,14 +78,14 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #fff1f2;
+      background: #f0fdf4;
     }
     ::-webkit-scrollbar-thumb {
-      background: #fda4af;
+      background: #a7f3d0;
       border-radius: 9999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #f43f5e;
+      background: #10b981;
     }
 
     /* 3D Envelope Perspectives */
@@ -112,7 +112,7 @@
     /* Dynamic Equalizer Animated Bars with Gradient */
     .equalizer-bar {
       width: 3.5px;
-      background: linear-gradient(to top, #f43f5e, #fbbf24);
+      background: linear-gradient(to top, #10b981, #f43f5e, #fbbf24);
       border-radius: 3px;
       animation: soundWave 1.2s ease-in-out infinite;
     }
@@ -132,7 +132,7 @@
       50% { transform: scaleY(1.3); }
     }
 
-    /* Floating Hearts Animation */
+    /* Floating Hearts & Blossoms */
     @keyframes floatHeartUp {
       0% {
         transform: translateY(0) scale(0.6) rotate(0deg);
@@ -153,33 +153,56 @@
       animation: floatHeartUp 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
 
-    /* Ultra-luxurious Frosted Acrylic Glassmorphism */
+    /* Interactive Blooming Petals on Pointer Move / Tap */
+    @keyframes bloomSproutFloat {
+      0% {
+        transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
+        opacity: 1;
+      }
+      40% {
+        transform: translate(-50%, -80%) scale(1.2) rotate(15deg);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translate(-50%, -140%) scale(0.6) rotate(35deg);
+        opacity: 0;
+      }
+    }
+    .cursor-petal {
+      position: fixed;
+      pointer-events: none;
+      z-index: 50;
+      animation: bloomSproutFloat 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      filter: drop-shadow(0 2px 5px rgba(244, 63, 94, 0.35));
+    }
+
+    /* Botanical Garden Frosted Acrylic Glassmorphism */
     .card-glass {
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1.5px solid rgba(254, 205, 211, 0.8);
       box-shadow: 
         0 10px 25px -5px rgba(244, 63, 94, 0.08),
-        0 4px 6px -2px rgba(0, 0, 0, 0.02),
+        0 4px 10px -2px rgba(16, 185, 129, 0.04),
         inset 0 1px 2px rgba(255, 255, 255, 0.95);
-      transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: transform;
     }
     .card-glass:hover {
       box-shadow: 
-        0 20px 35px -8px rgba(244, 63, 94, 0.2),
-        0 8px 16px -4px rgba(244, 63, 94, 0.12),
+        0 22px 40px -8px rgba(244, 63, 94, 0.22),
+        0 8px 16px -4px rgba(16, 185, 129, 0.12),
         inset 0 1px 2px rgba(255, 255, 255, 1);
-      border-color: rgba(251, 113, 133, 0.7);
+      border-color: rgba(244, 63, 94, 0.8);
     }
 
-    /* 3D Dynamic Sheen on Student Photocard */
+    /* 3D Dynamic Sheen on Student Flower Card */
     .card-sheen {
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background: radial-gradient(circle 280px at var(--sheen-x, 50%) var(--sheen-y, 50%), rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 65%);
+      background: radial-gradient(circle 280px at var(--sheen-x, 50%) var(--sheen-y, 50%), rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 65%);
       opacity: 0;
       transition: opacity 0.3s ease;
       border-radius: inherit;
@@ -188,6 +211,12 @@
     }
     .student-card:hover .card-sheen {
       opacity: 1;
+    }
+
+    /* Botanical Wreath Ring around Avatar */
+    .botanical-wreath {
+      background: radial-gradient(circle, rgba(255, 241, 242, 0.9) 0%, rgba(240, 253, 244, 0.85) 100%);
+      box-shadow: 0 0 0 3px rgba(254, 205, 211, 0.6), 0 0 15px rgba(244, 63, 94, 0.18);
     }
 
     /* Shimmer Button Effect */
@@ -239,7 +268,7 @@
       inset: 0;
       pointer-events: none;
       z-index: 1;
-      background: radial-gradient(750px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(254, 205, 211, 0.28), rgba(255, 241, 242, 0.05) 40%, transparent 70%);
+      background: radial-gradient(750px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(254, 205, 211, 0.3), rgba(209, 250, 229, 0.1) 40%, transparent 70%);
       transition: opacity 0.4s ease;
     }
 
@@ -270,13 +299,13 @@
 
     /* Glassmorphic Modal */
     .glass-overlay {
-      background: rgba(26, 12, 18, 0.78);
+      background: rgba(18, 28, 22, 0.82);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 text-gray-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
+<body class="bg-gradient-to-b from-[#f5fbf7] via-[#fff5f8] to-[#fdf8f5] text-gray-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
 
   <!-- Ambient Cursor Spotlight Tracker -->
   <div id="cursorSpotlight" class="opacity-0 md:opacity-100"></div>
@@ -288,18 +317,18 @@
   <audio id="bgAudio" loop preload="auto" src="./assets/music.mp3?v=20261021_apt_rose"></audio>
 
   <!-- Sticky Top Navigation Bar -->
-  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-rose-100 shadow-sm transition-all duration-300">
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-emerald-100 shadow-sm transition-all duration-300">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       
       <!-- Logo & Class Badge -->
       <a href="#" class="flex items-center gap-2.5 group">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-rose-500 to-pink-400 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-          <i class="fa-solid fa-graduation-cap text-lg"></i>
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-500 via-rose-500 to-amber-400 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+          <span class="text-xl">🌸</span>
         </div>
         <div>
-          <span class="text-xs uppercase tracking-wider font-bold text-rose-500 block">Tân Sinh Viên 2026</span>
+          <span class="text-xs uppercase tracking-wider font-extrabold text-emerald-600 block">Vườn Hoa Thanh Xuân 2026</span>
           <span class="font-serif font-bold text-gray-900 text-base sm:text-lg group-hover:text-rose-600 transition-colors">
-            20/10 • Lớp Chúng Mình 🌸
+            20/10 • 47 Đóa Hoa Lớp Mình 🌿🌸
           </span>
         </div>
       </a>
@@ -309,10 +338,10 @@
         <!-- Vinyl Mini Player Button -->
         <button id="toggleMusicBtn" 
           aria-label="Bật hoặc dừng nhạc nền"
-          class="flex items-center gap-2 bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-700 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95">
+          class="flex items-center gap-2 bg-emerald-50/90 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95">
           
           <!-- Spinning Vinyl Icon -->
-          <div id="vinylIcon" class="w-6 h-6 rounded-full bg-gray-900 border-2 border-amber-300 flex items-center justify-center relative shadow-inner">
+          <div id="vinylIcon" class="w-6 h-6 rounded-full bg-gray-900 border-2 border-emerald-400 flex items-center justify-center relative shadow-inner">
             <div class="w-2 h-2 rounded-full bg-rose-500"></div>
           </div>
 
@@ -325,7 +354,7 @@
             <span class="equalizer-bar"></span>
           </div>
 
-          <span id="musicStatusText" class="font-medium">APT. • ROSÉ 🎵</span>
+          <span id="musicStatusText" class="font-medium text-emerald-900">APT. • ROSÉ 🎵</span>
         </button>
 
       </div>
@@ -336,49 +365,55 @@
   <!-- Main Content Container -->
   <main class="relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-12">
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+    <!-- ==================== HERO SECTION: CỔNG VƯỜN HOA THANH XUÂN ==================== -->
+    <section class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 relative">
       
+      <!-- Garland Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50/90 border border-emerald-200/90 text-emerald-800 text-xs sm:text-sm font-bold shadow-sm mb-5 backdrop-blur-sm animate-bounce-gentle">
+        <span class="text-base">🌿</span>
+        <span>Khu Vườn Bách Hoa • 47 Nữ Sinh Viên Tân Khóa</span>
+        <span class="text-base">🌸</span>
+      </div>
+
       <!-- Main Grand Typography Heading -->
-      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
-        Chúc Mừng Ngày <br class="hidden sm:inline" />
-        <span class="bg-gradient-to-r from-rose-600 via-pink-600 to-amber-500 bg-clip-text text-transparent">
-          Phụ Nữ Việt Nam 20/10
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 leading-tight mb-4">
+        Chúc Mừng 20/10 <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-emerald-600 via-rose-600 to-amber-500 bg-clip-text text-transparent">
+          Khu Vườn 47 Đóa Hoa Rực Rỡ 🌸
         </span>
       </h1>
 
-      <!-- Warm Freshman Class Subtitle -->
+      <!-- Warm Garden Subtitle -->
       <p class="font-sans text-gray-600 text-base sm:text-lg sm:leading-relaxed max-w-2xl mx-auto font-medium">
-        Món quà đặc biệt từ <span class="text-rose-600 font-bold">tập thể các bạn nam</span> gửi tặng 47 cô gái tài năng, xinh đẹp của lớp mình. 
-        Chúc các bạn một thời thanh xuân đại học rạng rỡ, kỳ đầu suôn sẻ, qua môn A+ và luôn ngập tràn niềm vui! 🌸
+        Chào mừng bạn bước vào <strong class="text-emerald-700">Khu Vườn Thanh Xuân 20/10</strong>! Trong mắt tập thể các bạn nam, 47 cô gái trong lớp là 47 đóa hoa rạng ngời và độc nhất vô nhị — mỗi bạn mang một hương sắc, một nét duyên và tài năng riêng biệt. Hãy tìm đóa hoa của riêng bạn để đón nhận bức thư gửi riêng từ khu vườn nhé! 🌿🌷
       </p>
 
     </section>
 
     <!-- ==================== SEARCH & FILTER SECTION ==================== -->
     <section class="max-w-3xl mx-auto mb-10">
-      <div class="card-glass rounded-3xl p-5 sm:p-7 shadow-xl">
+      <div class="card-glass rounded-3xl p-5 sm:p-7 shadow-xl border-emerald-200/60">
         
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
           <label for="studentSearchInput" class="font-serif font-bold text-lg text-gray-900 flex items-center gap-2">
-            <span class="text-rose-500 text-xl">💌</span> Tra Cứu Bức Thư Dành Riêng Cho Bạn:
+            <span class="text-2xl">🌺</span> Tìm Đóa Hoa Của Riêng Bạn:
           </label>
-          <div class="inline-flex items-center gap-1.5 bg-rose-50 border border-rose-200 text-rose-700 px-3 py-1 rounded-full text-xs font-bold">
-            <i class="fa-solid fa-sparkles text-amber-400"></i>
-            <span>Hiển thị <strong id="matchCount" class="text-rose-600 text-sm">47</strong> / 47 bạn nữ</span>
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">
+            <i class="fa-solid fa-leaf text-emerald-500"></i>
+            <span>Đang khoe sắc <strong id="matchCount" class="text-rose-600 text-sm">47</strong> / 47 đóa hoa</span>
           </div>
         </div>
 
         <!-- Search Input Box -->
         <div class="relative">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-rose-400 text-lg">
+          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-emerald-500 text-lg">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
 
           <input 
             type="text" 
             id="studentSearchInput" 
-            placeholder="🔍 Nhập tên bạn để tìm thư riêng (vd: Gia Hân, Phương Linh, Thảo, My...)"
+            placeholder="🔍 Nhập tên bạn để tìm đóa hoa riêng (vd: Gia Hân, Phương Linh, Thảo, My...)"
             class="w-full pl-12 pr-12 py-3.5 bg-white/90 border border-rose-200 rounded-2xl text-gray-800 placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-rose-400 shadow-inner transition-all font-medium"
             autocomplete="off"
             spellcheck="false"
@@ -416,10 +451,11 @@
       <!-- Section Title -->
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="font-serif font-bold text-2xl sm:text-3xl text-gray-900">
-            Danh Sách 47 Đóa Hoa Tân Sinh Viên 🌸
+          <h2 class="font-serif font-bold text-2xl sm:text-3xl text-gray-900 flex items-center gap-2">
+            <span>Danh Sách 47 Đóa Hoa Đang Nở Rộ</span> 
+            <span class="text-2xl animate-float">🌿💐</span>
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 font-medium">Bấm vào bất kỳ bạn nào để mở chiếc phong bì 3D gửi riêng cho bạn ấy!</p>
+          <p class="text-xs sm:text-sm text-gray-500 font-medium">Mỗi bạn nữ là một loài hoa với hương sắc và biểu tượng riêng biệt. Chạm vào đóa hoa của bạn để hái hoa mở thư tay nhé!</p>
         </div>
       </div>
 
@@ -431,10 +467,10 @@
       <!-- No Match Found Empty State -->
       <div id="noMatchBox" class="hidden text-center py-16 card-glass rounded-3xl max-w-md mx-auto">
         <div class="text-5xl mb-3">🔍🌸</div>
-        <h3 class="font-serif font-bold text-lg text-gray-800 mb-1">Không tìm thấy bạn nào phù hợp</h3>
+        <h3 class="font-serif font-bold text-lg text-gray-800 mb-1">Không tìm thấy đóa hoa nào phù hợp</h3>
         <p class="text-sm text-gray-500 mb-4">Bạn thử gõ lại tên không dấu hoặc tìm theo tên gọi thân mật nhé!</p>
-        <button id="resetSearchBtn" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-4 py-2 rounded-xl text-sm transition-all shadow-md">
-          Xem Tất Cả 47 Bạn
+        <button id="resetSearchBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-xl text-sm transition-all shadow-md">
+          Ngắm Tất Cả 47 Đóa Hoa 🌸
         </button>
       </div>
 
@@ -445,14 +481,14 @@
       
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-2">
-          <span>🎯 Tiếp Sức Giảng Đường</span>
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100/90 text-emerald-800 text-xs font-bold mb-2 shadow-sm border border-emerald-200">
+          <span>🌿 3 Trạm Dưỡng Hoa Giảng Đường</span>
         </div>
         <h2 class="font-serif font-bold text-2xl sm:text-4xl text-gray-900 mb-3">
-          3 Trạm Tương Tác Đại Học Vui Nhộn 🎓✨
+          Góc Chăm Sóc Vườn Hoa Đại Học 🌸✨
         </h2>
         <p class="text-sm sm:text-base text-gray-600 font-medium">
-          Rút quẻ học phần may mắn, nạp trà sữa chạy deadline và nhận ngàn trái tim yêu thương từ hội nam sinh!
+          Hái hoa bói quẻ học phần may mắn, thưởng trà hoa thảo mộc chạy deadline và tưới ngàn giọt sương tim từ hội con trai!
         </p>
       </div>
 
@@ -470,20 +506,20 @@
                 <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/star-dynamic-color.png" alt="Star 3D" class="w-9 h-9 object-contain drop-shadow" loading="lazy">
               </div>
               <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100/80 border border-amber-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
-                Tâm Linh Giảng Đường 🌟
+                Tâm Linh Vườn Hoa 🌸
               </span>
             </div>
 
-            <h3 class="font-serif font-bold text-xl text-gray-900 mb-1">Rút Quẻ Học Phần</h3>
+            <h3 class="font-serif font-bold text-xl text-gray-900 mb-1">Hái Hoa Bói Quẻ</h3>
             <p class="text-xs text-gray-500 mb-5 font-medium leading-relaxed">
-              Bốc một thẻ quẻ để xem học kỳ đầu đại cương (Triết, Toán cao cấp...) sẽ độ bạn ra sao!
+              Bứt một cánh hoa may mắn để xem học kỳ đầu đại cương (Triết, Toán cao cấp...) sẽ độ bạn ra sao!
             </p>
 
             <!-- Fortune Result Display Box -->
             <div id="fortuneBox" class="bg-gradient-to-br from-amber-50/90 to-orange-50/90 border-2 border-dashed border-amber-300/80 rounded-2xl p-4 text-center min-h-[140px] flex flex-col items-center justify-center transition-all shadow-sm backdrop-blur-sm">
               <div id="fortunePlaceholder">
-                <div class="text-3xl mb-1">🎋✨</div>
-                <p class="text-xs font-semibold text-amber-800">Chạm nút bên dưới để rút quẻ đầu kỳ!</p>
+                <div class="text-3xl mb-1">🎋🌸</div>
+                <p class="text-xs font-semibold text-amber-800">Chạm nút bên dưới để hái hoa rút quẻ đầu kỳ!</p>
               </div>
               <div id="fortuneContent" class="hidden">
                 <span id="fortuneBadge" class="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full mb-1.5 shadow-sm">
@@ -502,11 +538,11 @@
           <!-- Fortune Action Button with Shimmer -->
           <button id="drawFortuneBtn" class="btn-shimmer mt-5 w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span id="drawFortuneBtnText">Rút Quẻ Ngay 🎋</span>
+            <span id="drawFortuneBtnText">Hái Hoa Rút Quẻ 🌸</span>
           </button>
         </div>
 
-        <!-- WIDGET 2: 🧋 TING TING TRÀ SỮA CHẠY DEADLINE -->
+        <!-- WIDGET 2: 🧋 TIỆM TRÀ HOA THẢO MỘC -->
         <div class="card-glass rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden group">
           <!-- Floating 3D Cup in background -->
           <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/cup-dynamic-color.png" alt="Cup 3D" class="absolute -right-3 -bottom-3 w-28 h-28 object-contain opacity-25 group-hover:opacity-40 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none drop-shadow-lg" loading="lazy">
@@ -517,13 +553,13 @@
                 <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/cup-dynamic-color.png" alt="Boba Cup 3D" class="w-9 h-9 object-contain drop-shadow" loading="lazy">
               </div>
               <span class="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-100/80 border border-rose-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
-                Deadline Fuel 🧋
+                Tiệm Trà Hoa Thảo Mộc 🧋
               </span>
             </div>
 
-            <h3 class="font-serif font-bold text-xl text-gray-900 mb-1">Ting Ting Trà Sữa</h3>
+            <h3 class="font-serif font-bold text-xl text-gray-900 mb-1">Trà Hoa Chạy Deadline</h3>
             <p class="text-xs text-gray-500 mb-4 font-medium leading-relaxed">
-              Tiếp sức 100% năng lượng chiến bài tập nhóm và vượt qua mọi bài kiểm tra khó nhằn!
+              Nạp năng lượng trà hoa cúc mật ong & trân châu hoàng kim chiến trọn vẹn mọi bài tập nhóm!
             </p>
 
             <!-- Boba Cup Visual & Live Counter -->
@@ -531,20 +567,20 @@
               
               <!-- Floating Chime Notification -->
               <div id="bobaChimeToast" class="absolute top-2 right-2 text-[10px] font-bold bg-rose-500 text-white px-2 py-0.5 rounded-full opacity-0 transition-opacity pointer-events-none shadow-md">
-                +1 Ly Trà Sữa 🧋
+                +1 Ly Trà Hoa 🧋
               </div>
 
               <div class="flex items-center justify-center gap-3 mb-2">
                 <div class="text-4xl animate-bounce-gentle">🧋</div>
                 <div class="text-left">
                   <div class="text-2xl font-black text-rose-600 font-serif" id="bobaCounter">0</div>
-                  <div class="text-[11px] text-gray-500 font-semibold">Ly trà sữa đã nạp</div>
+                  <div class="text-[11px] text-gray-500 font-semibold">Ly trà hoa đã nạp</div>
                 </div>
               </div>
 
               <!-- Boba Status Description -->
               <p id="bobaStatus" class="text-xs text-rose-700 font-semibold bg-white/90 px-3 py-1 rounded-full border border-rose-200 shadow-sm">
-                Đường 70% • Full thạch phô mai & trân châu hoàng kim ✨
+                Trà hoa cúc mật ong • Full thạch phô mai & trân châu hoàng kim ✨
               </p>
             </div>
           </div>
@@ -552,49 +588,49 @@
           <!-- Boba Order Action Button with Shimmer -->
           <button id="orderBobaBtn" class="btn-shimmer mt-5 w-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
             <i class="fa-solid fa-mug-hot"></i>
-            <span>Ting Ting Order Ngay (+Topping) 🧋</span>
+            <span>Thưởng Trà Hoa Ngay (+Topping) 🧋</span>
           </button>
         </div>
 
-        <!-- WIDGET 3: 💖 NẠP 100,000 TRÁI TIM TỪ HỘI NAM SINH -->
+        <!-- WIDGET 3: 💐 TƯỚI NƯỚC VƯỜN HOA 47 ĐÓA -->
         <div class="card-glass rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden group">
           <!-- Floating 3D Heart in background -->
           <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/heart-dynamic-color.png" alt="Heart 3D" class="absolute -right-3 -bottom-3 w-28 h-28 object-contain opacity-25 group-hover:opacity-40 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 pointer-events-none drop-shadow-lg" loading="lazy">
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-300/40 p-1 flex items-center justify-center shadow-inner">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-300/40 p-1 flex items-center justify-center shadow-inner">
                 <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/heart-dynamic-color.png" alt="Heart 3D" class="w-9 h-9 object-contain drop-shadow" loading="lazy">
               </div>
-              <span class="text-xs font-bold uppercase tracking-wider text-pink-700 bg-pink-100/80 border border-pink-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
-                Hội Nam Sinh Bảo Kê 💖
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 border border-emerald-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
+                Tưới Nước Vườn Hoa 💐
               </span>
             </div>
 
-            <h3 class="font-serif font-bold text-xl text-gray-900 mb-1">Nạp Triệu Trái Tim</h3>
+            <h3 class="font-serif font-bold text-xl text-gray-900 mb-1">Tưới Ngàn Giọt Sương</h3>
             <p class="text-xs text-gray-500 mb-4 font-medium leading-relaxed">
-              Các bạn nam cam kết hỗ trợ làm slide, khuân vác, hỗ trợ máy móc và bảo vệ 47 bạn nữ 24/7!
+              Các bạn nam tưới ngàn giọt sương và trái tim ấm áp để 47 đóa hoa của lớp mãi rực rỡ và tươi xinh!
             </p>
 
             <!-- Heart Multiplier Display -->
-            <div class="bg-gradient-to-br from-pink-50/90 via-rose-50/90 to-red-50/90 border border-pink-200/90 rounded-2xl p-4 text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center backdrop-blur-sm shadow-sm">
+            <div class="bg-gradient-to-br from-emerald-50/90 via-rose-50/90 to-pink-50/90 border border-emerald-200/90 rounded-2xl p-4 text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center backdrop-blur-sm shadow-sm">
               
-              <div class="text-xs uppercase tracking-wider font-bold text-pink-500 mb-1">Tổng Số Trái Tim Đã Nhận</div>
+              <div class="text-xs uppercase tracking-wider font-bold text-emerald-600 mb-1">Tổng Số Giọt Sương Đã Tưới</div>
               <div class="text-3xl font-black text-rose-600 font-serif flex items-center justify-center gap-1.5 mb-1.5">
                 <span id="widgetHeartCount">20,100</span>
                 <span class="text-2xl text-rose-500 animate-pulse">💖</span>
               </div>
               <p id="boysCheerText" class="text-[11px] text-gray-600 font-semibold italic">
-                "Hội con trai lớp mình mãi mãi là hậu phương vững chắc!"
+                "Hội con trai lớp mình mãi mãi là hậu phương vững chắc chăm sóc vườn hoa!"
               </p>
             </div>
           </div>
 
           <!-- Heart Blast Button with Shimmer -->
           <div class="relative mt-5">
-            <button id="sendHeartsBtn" class="btn-shimmer w-full bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 hover:opacity-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
-              <i class="fa-solid fa-heart-pulse animate-pulse"></i>
-              <span>Bắn Tim Yêu Thương (+520 Tim) 💖</span>
+            <button id="sendHeartsBtn" class="btn-shimmer w-full bg-gradient-to-r from-emerald-500 via-rose-500 to-pink-500 hover:opacity-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-seedling animate-bounce-gentle"></i>
+              <span>Tưới Sương Yêu Thương (+520 Tim) 💐</span>
             </button>
           </div>
 
@@ -606,17 +642,18 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="relative z-10 border-t border-rose-200 bg-white/60 backdrop-blur-md py-8 text-center text-xs text-gray-500 font-medium">
+  <footer class="relative z-10 border-t border-emerald-100 bg-white/70 backdrop-blur-md py-8 text-center text-xs text-gray-500 font-medium">
     <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
+        <span class="text-emerald-600 text-base">🌿</span>
+        <span class="font-serif font-bold text-gray-800 text-sm">20/10 • Khu Vườn 47 Đóa Hoa Tân Sinh Viên</span>
         <span class="text-rose-500 text-base">🌸</span>
-        <span class="font-serif font-bold text-gray-800 text-sm">20/10 • Kính Tặng 47 Bạn Nữ Tân Sinh Viên</span>
       </div>
       <p class="text-gray-500">
-        Thiết kế và lập trình với tất cả tấm lòng của <strong class="text-rose-600">Tập thể các bạn nam trong lớp</strong> 💖
+        Chăm sóc và vun trồng bởi <strong class="text-emerald-700 font-bold">Hội các bạn nam trong lớp</strong> 💐
       </p>
       <div class="text-gray-400">
-        Khóa 2026 - 2030 • Đại Học Tươi Đẹp
+        Khóa 2026 - 2030 • Giảng Đường Tươi Đẹp
       </div>
     </div>
   </footer>
@@ -1046,7 +1083,58 @@
       }
       window.addEventListener('load', triggerInstantMusicPlay);
 
-      // --- 6. HTML5 CANVAS: SAKURA PETALS & GOLDEN SPARKLES ---
+      // --- 6. BOTANICAL FLOWER LORE DATABASE FOR 47 GIRLS ---
+      const FLOWER_DATABASE = {
+        1: { species: "Hoa Anh Đào", meaning: "Thanh xuân tươi sáng & thuần khiết", icon: "🌸", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        2: { species: "Hoa Mai Vàng", meaning: "Nụ cười tỏa nắng & may mắn", icon: "🌼", tagColor: "bg-amber-100 text-amber-700 border-amber-200" },
+        3: { species: "Hoa Phong Lan", meaning: "Thông minh, sắc sảo & đài các", icon: "🌺", tagColor: "bg-purple-100 text-purple-700 border-purple-200" },
+        4: { species: "Hoa Cúc Họa Mi", meaning: "Dịu dàng, trong trẻo & hồn nhiên", icon: "🌼", tagColor: "bg-yellow-100 text-yellow-700 border-yellow-200" },
+        5: { species: "Hoa Hướng Dương", meaning: "Năng lượng tích cực & ấm áp", icon: "🌻", tagColor: "bg-amber-100 text-amber-700 border-amber-200" },
+        6: { species: "Hoa Cẩm Tú Cầu", meaning: "Viên mãn, chân thành & sâu sắc", icon: "💐", tagColor: "bg-sky-100 text-sky-700 border-sky-200" },
+        7: { species: "Hoa Sen Hồng", meaning: "Thuần khiết, thanh cao & kiên định", icon: "🪷", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        8: { species: "Hoa Mộc Lan", meaning: "Duyên dáng, kiêu hãnh & tươi vui", icon: "🌸", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        9: { species: "Nhành Trúc Xanh", meaning: "Bản lĩnh, dẻo dai & ngập tràn sức sống", icon: "🌿", tagColor: "bg-emerald-100 text-emerald-700 border-emerald-200" },
+        10: { species: "Hoa Ngọc Bích", meaning: "Lấp lánh, quý giá & tỏa sáng", icon: "💎", tagColor: "bg-teal-100 text-teal-700 border-teal-200" },
+        11: { species: "Hoa Đỗ Quyên", meaning: "Ánh mắt biết cười, rực rỡ sắc xuân", icon: "🌺", tagColor: "bg-red-100 text-red-700 border-red-200" },
+        12: { species: "Hoa Thủy Tiên", meaning: "Dịu dàng như dòng nước êm đềm", icon: "🌼", tagColor: "bg-cyan-100 text-cyan-700 border-cyan-200" },
+        13: { species: "Hoa Hướng Dương", meaning: "Vạn sự như ý, luôn ngập tràn niềm vui", icon: "🌻", tagColor: "bg-amber-100 text-amber-700 border-amber-200" },
+        14: { species: "Lá Phong Mùa Thu", meaning: "Ngọt ngào, ấm áp và lãng mạn", icon: "🍁", tagColor: "bg-orange-100 text-orange-700 border-orange-200" },
+        15: { species: "Hoa Dạ Lan Hương", meaning: "Tài năng, quý báu & tinh tế", icon: "🪻", tagColor: "bg-purple-100 text-purple-700 border-purple-200" },
+        16: { species: "Hoa Kim Ngân", meaning: "Rạng rỡ, tự tin & cuốn hút", icon: "✨", tagColor: "bg-yellow-100 text-yellow-700 border-yellow-200" },
+        17: { species: "Hoa Anh Thảo", meaning: "Nụ cười làm tan chảy mọi âu lo", icon: "🌸", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        18: { species: "Hoa Tulip Đỏ", meaning: "Gia đình hân hoan, bạn bè yêu mến", icon: "🌷", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        19: { species: "Hoa Diên Vĩ", meaning: "Linh hoạt, thông minh & hoạt bát", icon: "🌺", tagColor: "bg-indigo-100 text-indigo-700 border-indigo-200" },
+        20: { species: "Hoa Cẩm Tú", meaning: "Tương lai gấm hoa, tiền đồ xán lạn", icon: "💐", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        21: { species: "Hoa Bồ Công Anh", meaning: "Tự do bay bổng, tài giỏi & nghị lực", icon: "🌼", tagColor: "bg-lime-100 text-lime-700 border-lime-200" },
+        22: { species: "Hoa Mẫu Đơn", meaning: "Ấm áp, đong đầy tình yêu thương", icon: "🌸", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        23: { species: "Cánh Bướm Hoa Khôi", meaning: "Cất cánh bay cao cùng ước mơ", icon: "🦋", tagColor: "bg-sky-100 text-sky-700 border-sky-200" },
+        24: { species: "Hoa Mặt Trời", meaning: "Luôn kiên định hướng về phía trước", icon: "🌻", tagColor: "bg-amber-100 text-amber-700 border-amber-200" },
+        25: { species: "Hoa Quỳnh Trắng", meaning: "Tâm hồn thi vị, kiều diễm & thuần khiết", icon: "🌷", tagColor: "bg-stone-100 text-stone-700 border-stone-200" },
+        26: { species: "Hoa Sơn Trà", meaning: "Kiều diễm, ngọt ngào & kiêu sa", icon: "🌺", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        27: { species: "Hoa Linh Lan", meaning: "Thông minh, lanh lợi & may mắn", icon: "✨", tagColor: "bg-emerald-100 text-emerald-700 border-emerald-200" },
+        28: { species: "Hoa Cát Tường", meaning: "Thùy mị, an yên & vạn sự hanh thông", icon: "🌸", tagColor: "bg-purple-100 text-purple-700 border-purple-200" },
+        29: { species: "Hoa Ngọc Lan", meaning: "Thơm ngát, sáng trong & nhiệt huyết", icon: "💎", tagColor: "bg-teal-100 text-teal-700 border-teal-200" },
+        30: { species: "Hoa Trân Châu", meaning: "Quý báu, kiêu hãnh & xuất sắc", icon: "💐", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        31: { species: "Hoa Hồng Nhung", meaning: "Quyến rũ, kiêu hãnh & kiên cường", icon: "🌹", tagColor: "bg-red-100 text-red-700 border-red-200" },
+        32: { species: "Hoa Bạch Hợp", meaning: "Dịu dàng, thuần khiết & bao dung", icon: "🌷", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        33: { species: "Hoa Thảo Ngân", meaning: "Tiếng cười rộn rã, lan tỏa niềm vui", icon: "🌼", tagColor: "bg-amber-100 text-amber-700 border-amber-200" },
+        34: { species: "Nhành Thảo Mộc", meaning: "Tươi mát, dẻo dai & căng tràn nhựa sống", icon: "🌿", tagColor: "bg-emerald-100 text-emerald-700 border-emerald-200" },
+        35: { species: "Hoa Hải Đường", meaning: "Uyên bác, đài các & rạng rỡ", icon: "🌺", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        36: { species: "Hoa Cỏ May", meaning: "Xinh đẹp, may mắn & thi cử thuận lợi", icon: "🌻", tagColor: "bg-yellow-100 text-yellow-700 border-yellow-200" },
+        37: { species: "Hoa Hân Hoan", meaning: "Luôn giữ nụ cười tỏa sáng giảng đường", icon: "✨", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        38: { species: "Hoa Súng Nước", meaning: "Trong trẻo, thanh tĩnh & an yên", icon: "🌊", tagColor: "bg-cyan-100 text-cyan-700 border-cyan-200" },
+        39: { species: "Hoa Trà My", meaning: "Khí chất thanh tao, tài sắc vẹn toàn", icon: "🌸", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        40: { species: "Hoa Lưu Ly", meaning: "Chân thành, đáng yêu & khó quên", icon: "🌷", tagColor: "bg-sky-100 text-sky-700 border-sky-200" },
+        41: { species: "Hoa Quyên Hồng", meaning: "Năng động, ríu rít niềm vui tuổi trẻ", icon: "💐", tagColor: "bg-rose-100 text-rose-700 border-rose-200" },
+        42: { species: "Hoa Kim Cúc", meaning: "Bảo bối mang lại may mắn & hạnh phúc", icon: "🌼", tagColor: "bg-amber-100 text-amber-700 border-amber-200" },
+        43: { species: "Hoa Thảo Nguyên", meaning: "Hương cỏ ngọt ngào & tinh thần lạc quan", icon: "🌻", tagColor: "bg-lime-100 text-lime-700 border-lime-200" },
+        44: { species: "Hoa Huyền Diệu", meaning: "Quý phái, thanh lịch & đoan trang", icon: "💎", tagColor: "bg-purple-100 text-purple-700 border-purple-200" },
+        45: { species: "Hoa Tầm Xuân", meaning: "Tươi tắn, căng tràn sức sống đại học", icon: "🌺", tagColor: "bg-pink-100 text-pink-700 border-pink-200" },
+        46: { species: "Hoa Ánh Dương", meaning: "Tỏa sáng như ánh bình minh rạng rỡ", icon: "✨", tagColor: "bg-yellow-100 text-yellow-700 border-yellow-200" },
+        47: { species: "Hoa Hoàng Anh", meaning: "Tài sắc vẹn toàn, thanh xuân đong đầy", icon: "🌸", tagColor: "bg-rose-100 text-rose-700 border-rose-200" }
+      };
+
+      // --- 7. HTML5 CANVAS: BOTANICAL FLOWER PETALS & FIREFLIES ---
       (function initCanvasParticles() {
         if (!bgCanvas) return;
         const ctx = bgCanvas.getContext('2d');
@@ -1058,34 +1146,43 @@
           height = bgCanvas.height = window.innerHeight;
         });
 
-        // Generate Cherry Blossom Petals
+        // 5 Varied Garden Petal Colors (Sakura, Rose, Sunflower, Lavender, Mint Leaf)
+        const petalColors = [
+          'rgba(254, 205, 211, 0.85)', // Cherry blossom pink
+          'rgba(244, 63, 94, 0.75)',   // Rose ruby
+          'rgba(251, 191, 36, 0.85)',  // Sunflower gold
+          'rgba(216, 180, 254, 0.8)',   // Lavender lilac
+          'rgba(110, 231, 183, 0.75)'   // Mint emerald leaf
+        ];
+
+        // Generate Lush Garden Petals
         const petals = [];
-        const petalCount = window.innerWidth < 640 ? 25 : 45;
+        const petalCount = window.innerWidth < 640 ? 40 : 70;
         for (let i = 0; i < petalCount; i++) {
           petals.push({
             x: Math.random() * width,
             y: Math.random() * height - height,
             size: Math.random() * 8 + 6,
-            speedY: Math.random() * 1.2 + 0.8,
-            speedX: Math.random() * 0.8 - 0.4,
+            speedY: Math.random() * 1.3 + 0.8,
+            speedX: Math.random() * 1.0 - 0.5,
             rotation: Math.random() * 360,
-            rotationSpeed: Math.random() * 2 - 1,
-            color: Math.random() > 0.3 ? 'rgba(254, 205, 211, 0.7)' : 'rgba(253, 164, 175, 0.55)',
+            rotationSpeed: Math.random() * 2.4 - 1.2,
+            color: petalColors[Math.floor(Math.random() * petalColors.length)],
             swing: Math.random() * Math.PI * 2,
-            swingSpeed: Math.random() * 0.02 + 0.01
+            swingSpeed: Math.random() * 0.025 + 0.012
           });
         }
 
-        // Generate Golden Sparkles
+        // Generate Golden Fairy Fireflies
         const sparkles = [];
-        const sparkleCount = window.innerWidth < 640 ? 15 : 28;
+        const sparkleCount = window.innerWidth < 640 ? 18 : 35;
         for (let i = 0; i < sparkleCount; i++) {
           sparkles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 2 + 1,
+            radius: Math.random() * 2.2 + 1.2,
             alpha: Math.random(),
-            pulseSpeed: Math.random() * 0.03 + 0.01
+            pulseSpeed: Math.random() * 0.035 + 0.015
           });
         }
 
@@ -1095,7 +1192,7 @@
           ctx.rotate((p.rotation * Math.PI) / 180);
           ctx.fillStyle = p.color;
           ctx.beginPath();
-          // Organic curved petal shape
+          // Organic curved floral petal
           ctx.moveTo(0, 0);
           ctx.bezierCurveTo(p.size, -p.size, p.size * 1.8, p.size * 0.5, 0, p.size * 2);
           ctx.bezierCurveTo(-p.size * 1.8, p.size * 0.5, -p.size, -p.size, 0, 0);
@@ -1106,32 +1203,32 @@
         function animate() {
           ctx.clearRect(0, 0, width, height);
 
-          // Draw & update Sparkles
+          // Draw Fireflies
           for (let s of sparkles) {
             s.alpha += s.pulseSpeed;
             if (s.alpha > 1 || s.alpha < 0.1) s.pulseSpeed = -s.pulseSpeed;
             ctx.beginPath();
             ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(251, 191, 36, ${Math.max(0.1, s.alpha * 0.6)})`;
-            ctx.shadowColor = 'rgba(251, 191, 36, 0.8)';
-            ctx.shadowBlur = 6;
+            ctx.fillStyle = `rgba(251, 191, 36, ${Math.max(0.15, s.alpha * 0.7)})`;
+            ctx.shadowColor = 'rgba(251, 191, 36, 0.9)';
+            ctx.shadowBlur = 8;
             ctx.fill();
             ctx.shadowBlur = 0;
           }
 
-          // Draw & update Sakura Petals
+          // Draw Floral Petals
           for (let p of petals) {
             p.swing += p.swingSpeed;
-            p.x += p.speedX + Math.sin(p.swing) * 0.8;
+            p.x += p.speedX + Math.sin(p.swing) * 0.9;
             p.y += p.speedY;
             p.rotation += p.rotationSpeed;
 
-            if (p.y > height + 20) {
-              p.y = -20;
+            if (p.y > height + 25) {
+              p.y = -25;
               p.x = Math.random() * width;
             }
-            if (p.x > width + 20) p.x = -20;
-            if (p.x < -20) p.x = width + 20;
+            if (p.x > width + 25) p.x = -25;
+            if (p.x < -25) p.x = width + 25;
 
             drawPetal(p);
           }
@@ -1141,7 +1238,29 @@
         animate();
       })();
 
-      // --- 7. RENDER 47 STUDENT CARDS ---
+      // --- 8. INTERACTIVE FLOWER PETAL SPROUT ON MOUSE / TOUCH ---
+      let lastPetalTime = 0;
+      function triggerCursorFlora(e) {
+        const now = Date.now();
+        if (now - lastPetalTime < 70) return;
+        lastPetalTime = now;
+        const x = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : null);
+        const y = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : null);
+        if (x === null || y === null) return;
+
+        const petal = document.createElement('div');
+        petal.className = 'cursor-petal text-base sm:text-lg select-none';
+        const floraEmojis = ['🌸', '🌺', '🌷', '🌼', '🌻', '🌹', '🪷', '✨', '🍃', '🪻'];
+        petal.textContent = floraEmojis[Math.floor(Math.random() * floraEmojis.length)];
+        petal.style.left = `${x}px`;
+        petal.style.top = `${y}px`;
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 1200);
+      }
+      window.addEventListener('pointermove', triggerCursorFlora, { passive: true });
+      window.addEventListener('touchmove', triggerCursorFlora, { passive: true });
+
+      // --- 9. RENDER 47 BOTANICAL FLOWER CARDS ---
       function renderStudentCards(studentsToRender) {
         if (!studentsGrid) return;
         studentsGrid.innerHTML = '';
@@ -1163,36 +1282,43 @@
 
           // Format ID badge (#01, #02...)
           const formattedId = student.id < 10 ? `#0${student.id}` : `#${student.id}`;
+          const flowerInfo = FLOWER_DATABASE[student.id] || { species: "Đóa Hoa Thanh Xuân", meaning: "Rạng ngời & xinh xắn", icon: "🌸", tagColor: "bg-rose-100 text-rose-700 border-rose-200" };
 
           card.innerHTML = `
             <!-- 3D Sheen Light Reflection Overlay -->
             <div class="card-sheen"></div>
 
             <div class="relative z-10">
-              <!-- Top Row: Badge & Flower -->
+              <!-- Top Row: Badge & Flower Species -->
               <div class="flex items-center justify-between mb-3">
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-white/80 text-rose-700 border border-rose-200/90 shadow-sm backdrop-blur-sm">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-white/90 text-emerald-800 border border-emerald-200 shadow-sm backdrop-blur-sm">
                   ${formattedId}
                 </span>
-                <span class="text-xl sm:text-2xl group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 drop-shadow-sm">
-                  ${student.flower || '🌸'}
+                <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full border shadow-sm ${flowerInfo.tagColor}">
+                  <span>${flowerInfo.icon}</span>
+                  <span>${flowerInfo.species}</span>
                 </span>
               </div>
 
-              <!-- Avatar Glyph Circle with Luminous Ring -->
-              <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 rounded-full bg-gradient-to-tr from-rose-200 via-pink-100 to-amber-100 border-2 border-white shadow-md flex items-center justify-center text-rose-600 font-serif font-bold text-xl sm:text-2xl group-hover:border-rose-400 group-hover:scale-105 group-hover:shadow-rose-300/50 transition-all duration-300">
-                ${student.shortName ? student.shortName.charAt(0) : '🌸'}
+              <!-- Avatar Wreath Ring with Flower Center -->
+              <div class="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full botanical-wreath flex items-center justify-center text-3xl sm:text-4xl shadow-md group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  ${flowerInfo.icon}
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-emerald-600 text-white text-[10px] font-bold flex items-center justify-center border-2 border-white shadow-sm">
+                  ${student.shortName ? student.shortName.charAt(0) : '🌸'}
+                </div>
               </div>
 
               <!-- Student Full Name -->
-              <h3 class="font-serif font-bold text-gray-900 text-sm sm:text-base text-center leading-snug group-hover:text-rose-600 transition-colors line-clamp-1 mb-1">
+              <h3 class="font-serif font-extrabold text-gray-900 text-sm sm:text-base text-center leading-snug group-hover:text-emerald-700 transition-colors line-clamp-1 mb-1">
                 ${student.name}
               </h3>
 
-              <!-- Role & Wish Snippet -->
+              <!-- Flower Meaning & Wish Snippet -->
               <div class="text-center mb-4">
-                <span class="text-[10px] sm:text-[11px] font-semibold text-rose-600 bg-rose-50/90 border border-rose-200/50 px-2 py-0.5 rounded-md inline-block shadow-sm">
-                  Tân Sinh Viên 🎓
+                <span class="text-[10px] sm:text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md inline-block border border-emerald-200/60 shadow-sm">
+                  🌿 ${flowerInfo.meaning}
                 </span>
                 <p class="text-[11px] text-gray-500 line-clamp-2 mt-2 italic font-medium px-1 leading-relaxed">
                   "${student.wishQuote}"
@@ -1200,10 +1326,10 @@
               </div>
             </div>
 
-            <!-- Card Bottom Action Button with Shimmer -->
-            <button class="relative z-10 w-full btn-shimmer bg-gradient-to-r from-rose-500 to-pink-500 group-hover:from-rose-600 group-hover:to-pink-600 text-white font-bold py-2.5 px-3 rounded-xl text-xs shadow-md group-hover:shadow-lg group-hover:shadow-rose-400/40 transition-all flex items-center justify-center gap-1.5 active:scale-95">
-              <span>Mở Thư Riêng</span>
-              <span class="group-hover:translate-x-1 transition-transform">💌</span>
+            <!-- Card Bottom Action Button with Garden Shimmer -->
+            <button class="relative z-10 w-full btn-shimmer bg-gradient-to-r from-emerald-600 via-rose-500 to-pink-500 hover:from-emerald-700 hover:to-rose-600 text-white font-bold py-2.5 px-3 rounded-xl text-xs shadow-md group-hover:shadow-lg transition-all flex items-center justify-center gap-1.5 active:scale-95">
+              <span>Hái Hoa Mở Thư</span>
+              <span class="group-hover:translate-x-1 group-hover:rotate-12 transition-transform">🌸</span>
             </button>
           `;
 
@@ -1290,13 +1416,14 @@
       function openEnvelopeModal(student, autoUnfold = false) {
         if (!student || !letterModal) return;
         currentActiveStudent = student;
+        const flowerInfo = FLOWER_DATABASE[student.id] || { species: "Đóa Hoa Thanh Xuân", meaning: "Rạng ngời & tươi xinh", icon: "🌸" };
 
-        // Populate Letter Content
-        sealRecipientText.textContent = `Gửi ${student.shortName} 💌`;
-        letterFlowerIcon.textContent = student.flower || '🌸';
-        letterSalutation.textContent = `Thân gửi ${student.name} 🌸`;
+        // Populate Letter Content with Botanical Garden Flora
+        sealRecipientText.textContent = `Gửi ${student.shortName} 🌸`;
+        letterFlowerIcon.textContent = flowerInfo.icon;
+        letterSalutation.textContent = `Thân gửi ${student.name} — Đóa ${flowerInfo.species} 🌸`;
         letterWishQuote.textContent = `"${student.wishQuote}"`;
-        copyBtnText.textContent = `📋 Sao chép link gửi cho ${student.shortName}`;
+        copyBtnText.textContent = `📋 Tặng link đóa hoa cho ${student.shortName}`;
 
         // Reset Envelope and Seal state
         if (waxSeal) waxSeal.classList.remove('seal-crack-anim');
@@ -1332,33 +1459,33 @@
         // 3. Animate envelope flap open
         envelopeShell.classList.add('envelope-open');
 
-        // 4. Fire Grand Two-Stage Confetti Cannon
+        // 4. Fire Grand Multi-Flora Petal Confetti
         if (typeof confetti === 'function') {
-          // Central burst
+          // Central flower petal burst
           confetti({
-            particleCount: 80,
-            spread: 85,
+            particleCount: 90,
+            spread: 90,
             origin: { y: 0.55 },
-            colors: ['#e11d48', '#fda4af', '#f59e0b', '#ec4899', '#ffffff'],
-            startVelocity: 38,
-            scalar: 1.15
+            colors: ['#10b981', '#f43f5e', '#fbbf24', '#ec4899', '#ffffff', '#fda4af', '#a7f3d0'],
+            startVelocity: 40,
+            scalar: 1.25
           });
 
-          // Dual lateral celebratory fireworks
+          // Dual lateral celebratory garden fireworks
           setTimeout(() => {
             confetti({
-              particleCount: 45,
+              particleCount: 50,
               angle: 60,
-              spread: 60,
+              spread: 65,
               origin: { x: 0.05, y: 0.75 },
-              colors: ['#f43f5e', '#ec4899', '#fbbf24', '#ffffff']
+              colors: ['#10b981', '#f43f5e', '#ec4899', '#fbbf24']
             });
             confetti({
-              particleCount: 45,
+              particleCount: 50,
               angle: 120,
-              spread: 60,
+              spread: 65,
               origin: { x: 0.95, y: 0.75 },
-              colors: ['#f43f5e', '#ec4899', '#fbbf24', '#ffffff']
+              colors: ['#10b981', '#f43f5e', '#ec4899', '#fbbf24']
             });
           }, 180);
         }
@@ -1524,17 +1651,17 @@
           fortuneTitle.textContent = fortune.title;
           fortuneDesc.textContent = fortune.desc;
 
-          showToast(`Quẻ của bạn: "${fortune.title}" ✨`, '🎋');
+          showToast(`Đóa hoa của bạn hé mở: "${fortune.title}" 🌸`, '🌸');
         });
       }
 
-      // --- 13. WIDGET 2: 🧋 TING TING TRÀ SỮA CHẠY DEADLINE ---
+      // --- 13. WIDGET 2: 🧋 TIỆM TRÀ HOA THẢO MỘC ---
       const BOBA_TOPPINGS = [
-        'Đường 70% • Full thạch phô mai & trân châu hoàng kim ✨',
-        'Trà đào cam sả 50% đá • Tiếp thêm năng lượng ôn thi Triết 🌿',
-        'Trà sữa nướng trân châu đường đen • Đập tan cơn buồn ngủ ⚡',
-        'Matcha latte kem cheese béo ngậy • Slide thuyết trình điểm 10 🍵',
-        'Trà ô long hạt sen ngọt thanh • GPA kỳ này chạm mốc 4.0 🎯'
+        'Trà hoa cúc mật ong • Full thạch phô mai & trân châu hoàng kim ✨',
+        'Trà đào hoa hồng 50% đá • Tiếp thêm năng lượng ôn thi Triết 🌿',
+        'Trà sữa ô long quế hoa • Đập tan cơn buồn ngủ ⚡',
+        'Matcha hoa nhài kem cheese béo ngậy • Slide thuyết trình điểm 10 🍵',
+        'Trà sen vàng hạt sen ngọt thanh • GPA kỳ này chạm mốc 4.0 🎯'
       ];
 
       if (orderBobaBtn) {
@@ -1557,24 +1684,24 @@
           const topping = BOBA_TOPPINGS[bobaOrderCount % BOBA_TOPPINGS.length];
           if (bobaStatus) bobaStatus.textContent = topping;
 
-          showToast('Ting ting! 1 ly trà sữa nạp năng lượng đã sẵn sàng 🧋', '🧋');
+          showToast('Ting ting! 1 ly trà hoa thảo mộc thơm ngát đã sẵn sàng 🧋', '🧋');
         });
       }
 
-      // --- 14. WIDGET 3: 💖 NẠP 100,000 TRÁI TIM TỪ HỘI NAM SINH ---
+      // --- 14. WIDGET 3: 💐 TƯỚI NƯỚC VƯỜN HOA 47 ĐÓA ---
       const BOYS_CHEERS = [
-        '"Hội con trai lớp mình mãi mãi là hậu phương vững chắc!"',
+        '"Hội con trai lớp mình nguyện làm những người làm vườn tận tụy nhất!"',
+        '"Chúc 47 đóa hoa của lớp mình mãi mãi rạng rỡ, xinh đẹp và tỏa ngát hương thơm!"',
         '"Bất kể bài tập khó cỡ nào, cứ ới hội nam sinh nhé!"',
-        '"Chúc 47 bông hoa của lớp luôn là những cô gái hạnh phúc nhất!"',
-        '"Deadline để chúng tớ lo, các cậu chỉ cần luôn xinh đẹp rạng rỡ!"',
-        '"Kỳ đầu đại học có khó khăn gì, cứ để anh em trong lớp ra tay!"'
+        '"Deadline để chúng tớ lo, các bạn nữ chỉ cần luôn tươi cười rạng ngời như hoa!"',
+        '"Vườn hoa thanh xuân đại học sẽ đẹp nhất khi có trọn vẹn 47 đóa hoa các bạn!"'
       ];
 
       function spawnFloatingHearts(e) {
-        const heartEmojis = ['💖', '💕', '🌸', '✨', '💗', '💘', '❤️'];
+        const heartEmojis = ['🌸', '🌺', '💐', '✨', '🌷', '💖', '🌼', '🌹', '🪷'];
         const buttonRect = sendHeartsBtn.getBoundingClientRect();
         
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 7; i++) {
           const heart = document.createElement('div');
           heart.className = 'flying-heart';
           heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
@@ -1600,7 +1727,7 @@
           const cheer = BOYS_CHEERS[Math.floor(Math.random() * BOYS_CHEERS.length)];
           if (boysCheerText) boysCheerText.textContent = cheer;
 
-          showToast('Đã gửi thêm 520 trái tim yêu thương từ hội nam sinh! 💖', '❤️');
+          showToast('Đã tưới thêm 520 giọt sương tim cho vườn hoa thêm rực rỡ! 💐', '💐');
         });
       }
 
