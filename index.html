@@ -102,17 +102,17 @@
     /* Envelope Top Flap */
     .envelope-flap {
       transform-origin: top;
-      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .envelope-open .envelope-flap {
       transform: rotateX(180deg);
       z-index: 10;
     }
 
-    /* Audio Equalizer Animated Bars */
+    /* Dynamic Equalizer Animated Bars with Gradient */
     .equalizer-bar {
-      width: 3px;
-      background: #e11d48;
+      width: 3.5px;
+      background: linear-gradient(to top, #f43f5e, #fbbf24);
       border-radius: 3px;
       animation: soundWave 1.2s ease-in-out infinite;
     }
@@ -153,21 +153,108 @@
       animation: floatHeartUp 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     }
 
-    /* Card Hover Glow */
+    /* Ultra-luxurious Frosted Acrylic Glassmorphism */
     .card-glass {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(254, 205, 211, 0.6);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 
+        0 10px 25px -5px rgba(244, 63, 94, 0.08),
+        0 4px 6px -2px rgba(0, 0, 0, 0.02),
+        inset 0 1px 2px rgba(255, 255, 255, 0.95);
+      transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+      will-change: transform;
     }
     .card-glass:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 30px -5px rgba(244, 63, 94, 0.25);
-      border-color: rgba(244, 63, 94, 0.8);
+      box-shadow: 
+        0 20px 35px -8px rgba(244, 63, 94, 0.2),
+        0 8px 16px -4px rgba(244, 63, 94, 0.12),
+        inset 0 1px 2px rgba(255, 255, 255, 1);
+      border-color: rgba(251, 113, 133, 0.7);
     }
 
-    /* Letter Texture & Stamp */
+    /* 3D Dynamic Sheen on Student Photocard */
+    .card-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle 280px at var(--sheen-x, 50%) var(--sheen-y, 50%), rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 65%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: inherit;
+      mix-blend-mode: overlay;
+      z-index: 5;
+    }
+    .student-card:hover .card-sheen {
+      opacity: 1;
+    }
+
+    /* Shimmer Button Effect */
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 65%
+      );
+      transform: rotate(30deg) translateY(-100%);
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-shimmer:hover::after {
+      transform: rotate(30deg) translateY(100%);
+    }
+
+    /* Turntable Mechanical Tonearm */
+    .tonearm {
+      position: absolute;
+      top: -3px;
+      right: -2px;
+      width: 26px;
+      height: 32px;
+      transform-origin: 21px 5px;
+      transform: rotate(-30deg);
+      transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+      z-index: 10;
+      filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.3));
+    }
+    .tonearm-playing {
+      transform: rotate(10deg) !important;
+    }
+
+    /* Ambient Cursor Spotlight Glow */
+    #cursorSpotlight {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background: radial-gradient(750px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(254, 205, 211, 0.28), rgba(255, 241, 242, 0.05) 40%, transparent 70%);
+      transition: opacity 0.4s ease;
+    }
+
+    /* Wax Seal Crack Snap Animation */
+    @keyframes sealCrack {
+      0% { transform: translate(-50%, -50%) scale(1); filter: brightness(1); }
+      35% { transform: translate(-50%, -50%) scale(1.2) rotate(6deg); filter: brightness(1.4); }
+      65% { transform: translate(-50%, -50%) scale(0.9) rotate(-4deg); filter: brightness(1.2); }
+      100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    }
+    .seal-crack-anim {
+      animation: sealCrack 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+    }
+
+    /* Letter Texture & Gold Foil Embellishments */
     .letter-paper {
       background: #fffdfa;
       background-image: 
@@ -175,17 +262,24 @@
         radial-gradient(#fecdd3 0.65px, #fffdfa 0.65px);
       background-size: 26px 26px;
       background-position: 0 0, 13px 13px;
+      box-shadow: 
+        0 25px 60px -15px rgba(244, 63, 94, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.9),
+        inset 0 0 30px rgba(254, 205, 211, 0.25);
     }
 
     /* Glassmorphic Modal */
     .glass-overlay {
-      background: rgba(26, 12, 18, 0.75);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(26, 12, 18, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
   </style>
 </head>
 <body class="bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 text-gray-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
+
+  <!-- Ambient Cursor Spotlight Tracker -->
+  <div id="cursorSpotlight" class="opacity-0 md:opacity-100"></div>
 
   <!-- Interactive HTML5 Canvas: Cherry Blossom Petals & Sparkles Background -->
   <canvas id="bgCanvas" class="fixed inset-0 pointer-events-none z-0 w-full h-full"></canvas>
@@ -275,30 +369,47 @@
       </p>
 
       <!-- Hero Audio Vinyl Player Banner -->
-      <div class="inline-block w-full max-w-md bg-white/80 backdrop-blur-md border border-rose-200/80 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all">
+      <div class="inline-block w-full max-w-md card-glass rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all">
         <div class="flex items-center justify-between gap-4">
           
-          <div class="flex items-center gap-3 text-left">
-            <!-- Vinyl Disc Graphic -->
-            <div id="heroVinylDisc" class="w-12 h-12 rounded-full bg-gradient-to-tr from-gray-950 via-gray-800 to-gray-900 border-2 border-amber-300 flex items-center justify-center relative shadow-md">
-              <!-- Vinyl Grooves -->
-              <div class="absolute inset-1 rounded-full border border-gray-700 opacity-60"></div>
-              <div class="absolute inset-2.5 rounded-full border border-gray-700 opacity-60"></div>
-              <!-- Vinyl Center -->
-              <div class="w-4 h-4 rounded-full bg-rose-500 border border-white flex items-center justify-center">
-                <div class="w-1 h-1 rounded-full bg-white"></div>
+          <div class="flex items-center gap-3.5 text-left">
+            <!-- Vinyl Disc & Mechanical Tonearm Stage -->
+            <div class="relative w-14 h-14 flex items-center justify-center">
+              <!-- Vinyl Disc Graphic -->
+              <div id="heroVinylDisc" class="w-12 h-12 rounded-full bg-gradient-to-tr from-gray-950 via-gray-800 to-gray-900 border-2 border-amber-300 flex items-center justify-center relative shadow-md">
+                <!-- Vinyl Grooves -->
+                <div class="absolute inset-1 rounded-full border border-gray-700 opacity-60"></div>
+                <div class="absolute inset-2.5 rounded-full border border-gray-700 opacity-60"></div>
+                <!-- Vinyl Center -->
+                <div class="w-4 h-4 rounded-full bg-rose-500 border border-white flex items-center justify-center">
+                  <div class="w-1 h-1 rounded-full bg-white"></div>
+                </div>
+              </div>
+
+              <!-- Turntable Tonearm (Pivots smoothly on play/pause) -->
+              <div id="heroTonearm" class="tonearm">
+                <svg width="26" height="32" viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Pivot base -->
+                  <circle cx="21" cy="5" r="4" fill="#fbbf24" stroke="#b45309" stroke-width="1.2"/>
+                  <!-- Metallic arm -->
+                  <path d="M21 5 L13 18 L11 25" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Cartridge needle head -->
+                  <rect x="7" y="24" width="5" height="7" rx="1.5" fill="#e11d48" stroke="#881337" stroke-width="0.8" transform="rotate(-15 7 24)"/>
+                </svg>
               </div>
             </div>
 
             <div>
-              <h2 class="text-xs uppercase tracking-wider font-bold text-rose-500">Nhạc Nền Thanh Xuân</h2>
-              <p class="font-serif font-bold text-gray-800 text-sm">Giai Điệu 20/10 Rực Rỡ 🎵</p>
-              <span class="text-[11px] text-gray-500">Chạm để bật/tắt nhạc nền</span>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[10px] uppercase tracking-wider font-extrabold text-rose-600 bg-rose-100/80 px-2 py-0.5 rounded-full">Nhạc Nền Thanh Xuân</span>
+              </div>
+              <p class="font-serif font-bold text-gray-900 text-sm mt-0.5">Giai Điệu 20/10 Rực Rỡ 🎵</p>
+              <span class="text-[11px] text-gray-500 font-medium">Chạm để nghe giai điệu Acoustic</span>
             </div>
           </div>
 
-          <!-- Hero Play/Pause Toggle Button -->
-          <button id="heroPlayBtn" class="w-11 h-11 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-transform" aria-label="Phát nhạc">
+          <!-- Hero Play/Pause Toggle Button with Shimmer -->
+          <button id="heroPlayBtn" class="btn-shimmer w-11 h-11 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-all" aria-label="Phát nhạc">
             <i id="heroPlayIcon" class="fa-solid fa-play ml-0.5 text-base"></i>
           </button>
 
@@ -413,17 +524,16 @@
 
         <!-- WIDGET 1: 🎓 RÚT QUẺ HỌC PHẦN ĐẠI HỌC -->
         <div class="card-glass rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden group">
-          <div class="absolute -right-6 -bottom-6 text-7xl text-amber-200/40 pointer-events-none group-hover:scale-110 transition-transform">
-            🎋
-          </div>
+          <!-- Floating 3D Trophy / Star in background -->
+          <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/trophy-dynamic-color.png" alt="Trophy 3D" class="absolute -right-3 -bottom-3 w-28 h-28 object-contain opacity-25 group-hover:opacity-40 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 pointer-events-none drop-shadow-lg" loading="lazy">
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">
-                🎓
-              </span>
-              <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
-                Tâm Linh Giảng Đường
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-300/40 p-1 flex items-center justify-center shadow-inner">
+                <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/star-dynamic-color.png" alt="Star 3D" class="w-9 h-9 object-contain drop-shadow" loading="lazy">
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100/80 border border-amber-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
+                Tâm Linh Giảng Đường 🌟
               </span>
             </div>
 
@@ -433,13 +543,13 @@
             </p>
 
             <!-- Fortune Result Display Box -->
-            <div id="fortuneBox" class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-dashed border-amber-300 rounded-2xl p-4 text-center min-h-[140px] flex flex-col items-center justify-center transition-all">
+            <div id="fortuneBox" class="bg-gradient-to-br from-amber-50/90 to-orange-50/90 border-2 border-dashed border-amber-300/80 rounded-2xl p-4 text-center min-h-[140px] flex flex-col items-center justify-center transition-all shadow-sm backdrop-blur-sm">
               <div id="fortunePlaceholder">
                 <div class="text-3xl mb-1">🎋✨</div>
                 <p class="text-xs font-semibold text-amber-800">Chạm nút bên dưới để rút quẻ đầu kỳ!</p>
               </div>
               <div id="fortuneContent" class="hidden">
-                <span id="fortuneBadge" class="inline-block bg-amber-500 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full mb-1.5 shadow-sm">
+                <span id="fortuneBadge" class="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full mb-1.5 shadow-sm">
                   Quẻ Đại Cát 🌟
                 </span>
                 <h4 id="fortuneTitle" class="font-serif font-bold text-base text-gray-900 mb-1">
@@ -452,8 +562,8 @@
             </div>
           </div>
 
-          <!-- Fortune Action Button -->
-          <button id="drawFortuneBtn" class="mt-5 w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
+          <!-- Fortune Action Button with Shimmer -->
+          <button id="drawFortuneBtn" class="btn-shimmer mt-5 w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
             <span id="drawFortuneBtnText">Rút Quẻ Ngay 🎋</span>
           </button>
@@ -461,17 +571,16 @@
 
         <!-- WIDGET 2: 🧋 TING TING TRÀ SỮA CHẠY DEADLINE -->
         <div class="card-glass rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden group">
-          <div class="absolute -right-6 -bottom-6 text-7xl text-rose-200/40 pointer-events-none group-hover:scale-110 transition-transform">
-            🧋
-          </div>
+          <!-- Floating 3D Cup in background -->
+          <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/cup-dynamic-color.png" alt="Cup 3D" class="absolute -right-3 -bottom-3 w-28 h-28 object-contain opacity-25 group-hover:opacity-40 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none drop-shadow-lg" loading="lazy">
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-10 h-10 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl font-bold">
-                🧋
-              </span>
-              <span class="text-xs font-bold uppercase tracking-wider text-rose-600 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded-full">
-                Deadline Fuel
+              <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-300/40 p-1 flex items-center justify-center shadow-inner">
+                <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/cup-dynamic-color.png" alt="Boba Cup 3D" class="w-9 h-9 object-contain drop-shadow" loading="lazy">
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-100/80 border border-rose-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
+                Deadline Fuel 🧋
               </span>
             </div>
 
@@ -481,10 +590,10 @@
             </p>
 
             <!-- Boba Cup Visual & Live Counter -->
-            <div class="bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-200 rounded-2xl p-4 text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center">
+            <div class="bg-gradient-to-br from-rose-50/90 to-pink-50/90 border border-rose-200/90 rounded-2xl p-4 text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center backdrop-blur-sm shadow-sm">
               
               <!-- Floating Chime Notification -->
-              <div id="bobaChimeToast" class="absolute top-2 right-2 text-[10px] font-bold bg-rose-500 text-white px-2 py-0.5 rounded-full opacity-0 transition-opacity pointer-events-none">
+              <div id="bobaChimeToast" class="absolute top-2 right-2 text-[10px] font-bold bg-rose-500 text-white px-2 py-0.5 rounded-full opacity-0 transition-opacity pointer-events-none shadow-md">
                 +1 Ly Trà Sữa 🧋
               </div>
 
@@ -497,14 +606,14 @@
               </div>
 
               <!-- Boba Status Description -->
-              <p id="bobaStatus" class="text-xs text-rose-700 font-semibold bg-white/80 px-3 py-1 rounded-full border border-rose-200 shadow-sm">
+              <p id="bobaStatus" class="text-xs text-rose-700 font-semibold bg-white/90 px-3 py-1 rounded-full border border-rose-200 shadow-sm">
                 Đường 70% • Full thạch phô mai & trân châu hoàng kim ✨
               </p>
             </div>
           </div>
 
-          <!-- Boba Order Action Button -->
-          <button id="orderBobaBtn" class="mt-5 w-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
+          <!-- Boba Order Action Button with Shimmer -->
+          <button id="orderBobaBtn" class="btn-shimmer mt-5 w-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
             <i class="fa-solid fa-mug-hot"></i>
             <span>Ting Ting Order Ngay (+Topping) 🧋</span>
           </button>
@@ -512,17 +621,16 @@
 
         <!-- WIDGET 3: 💖 NẠP 100,000 TRÁI TIM TỪ HỘI NAM SINH -->
         <div class="card-glass rounded-3xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden group">
-          <div class="absolute -right-6 -bottom-6 text-7xl text-pink-200/40 pointer-events-none group-hover:scale-110 transition-transform">
-            💖
-          </div>
+          <!-- Floating 3D Heart in background -->
+          <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/heart-dynamic-color.png" alt="Heart 3D" class="absolute -right-3 -bottom-3 w-28 h-28 object-contain opacity-25 group-hover:opacity-40 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 pointer-events-none drop-shadow-lg" loading="lazy">
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="w-10 h-10 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl font-bold">
-                💖
-              </span>
-              <span class="text-xs font-bold uppercase tracking-wider text-pink-600 bg-pink-50 border border-pink-200 px-2 py-0.5 rounded-full">
-                Hội Nam Sinh Bảo Kê
+              <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-300/40 p-1 flex items-center justify-center shadow-inner">
+                <img src="https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/color/heart-dynamic-color.png" alt="Heart 3D" class="w-9 h-9 object-contain drop-shadow" loading="lazy">
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-pink-700 bg-pink-100/80 border border-pink-300/80 px-2.5 py-1 rounded-full backdrop-blur-sm shadow-sm">
+                Hội Nam Sinh Bảo Kê 💖
               </span>
             </div>
 
@@ -532,7 +640,7 @@
             </p>
 
             <!-- Heart Multiplier Display -->
-            <div class="bg-gradient-to-br from-pink-50 via-rose-50 to-red-50 border border-pink-200 rounded-2xl p-4 text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center">
+            <div class="bg-gradient-to-br from-pink-50/90 via-rose-50/90 to-red-50/90 border border-pink-200/90 rounded-2xl p-4 text-center relative overflow-hidden min-h-[140px] flex flex-col items-center justify-center backdrop-blur-sm shadow-sm">
               
               <div class="text-xs uppercase tracking-wider font-bold text-pink-500 mb-1">Tổng Số Trái Tim Đã Nhận</div>
               <div class="text-3xl font-black text-rose-600 font-serif flex items-center justify-center gap-1.5 mb-1.5">
@@ -545,9 +653,9 @@
             </div>
           </div>
 
-          <!-- Heart Blast Button -->
+          <!-- Heart Blast Button with Shimmer -->
           <div class="relative mt-5">
-            <button id="sendHeartsBtn" class="w-full bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 hover:opacity-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
+            <button id="sendHeartsBtn" class="btn-shimmer w-full bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 hover:opacity-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2">
               <i class="fa-solid fa-heart-pulse animate-pulse"></i>
               <span>Bắn Tim Yêu Thương (+520 Tim) 💖</span>
             </button>
@@ -634,8 +742,14 @@
         </div>
 
         <!-- Personalized Letter Sheet (Unfolds smoothly out of envelope) -->
-        <div id="letterSheet" class="hidden w-full max-w-lg letter-paper rounded-3xl p-6 sm:p-9 shadow-2xl border-2 border-rose-200/80 relative text-left transition-all duration-500 scale-95 opacity-0">
+        <div id="letterSheet" class="hidden w-full max-w-lg letter-paper rounded-3xl p-6 sm:p-9 shadow-2xl border-2 border-rose-200/80 relative text-left transition-all duration-700 scale-95 opacity-0">
           
+          <!-- Golden Foil Corner Flourishes -->
+          <span class="absolute top-3 left-3 text-amber-400/70 text-xs select-none">✦</span>
+          <span class="absolute top-3 right-3 text-amber-400/70 text-xs select-none">✦</span>
+          <span class="absolute bottom-3 left-3 text-amber-400/70 text-xs select-none">✦</span>
+          <span class="absolute bottom-3 right-3 text-amber-400/70 text-xs select-none">✦</span>
+
           <!-- Decorative Top Ribbon / Stamp -->
           <div class="flex items-center justify-between border-b-2 border-dashed border-rose-200 pb-4 mb-5">
             <div class="flex items-center gap-2">
@@ -703,8 +817,8 @@
 
           <!-- Letter Bottom Actions -->
           <div class="mt-7 flex flex-col sm:flex-row items-center gap-3">
-            <!-- Copy Link Button -->
-            <button id="copyShareLinkBtn" class="w-full sm:flex-1 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-3 px-4 rounded-2xl text-sm shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+            <!-- Copy Link Button with Shimmer -->
+            <button id="copyShareLinkBtn" class="btn-shimmer w-full sm:flex-1 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-3 px-4 rounded-2xl text-sm shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2">
               <i class="fa-solid fa-copy"></i>
               <span id="copyBtnText">📋 Sao chép link gửi cho bạn</span>
             </button>
@@ -821,7 +935,7 @@
         }, 3200);
       }
 
-      // --- 4. WEB AUDIO API SYNTHESIZER (CRYSTAL CHIME & BOBA SOUND) ---
+      // --- 4. WEB AUDIO API SYNTHESIZER (PROCEDURAL AUDIO & CHIMES) ---
       let audioCtx = null;
       function getAudioContext() {
         if (!audioCtx) {
@@ -834,6 +948,24 @@
           audioCtx.resume();
         }
         return audioCtx;
+      }
+
+      function playPopSound(freq = 900) {
+        try {
+          const ctx = getAudioContext();
+          if (!ctx) return;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(freq * 0.4, ctx.currentTime + 0.04);
+          gain.gain.setValueAtTime(0.06, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.04);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.04);
+        } catch (e) {}
       }
 
       function playCrystalChime() {
@@ -853,12 +985,55 @@
             osc.start(ctx.currentTime + idx * 0.07);
             osc.stop(ctx.currentTime + idx * 0.07 + 0.6);
           });
-        } catch (e) {
-          // Audio autoplay block fallback
-        }
+        } catch (e) {}
+      }
+
+      function playWaxCrackSound() {
+        try {
+          const ctx = getAudioContext();
+          if (!ctx) return;
+          
+          // 1. Noise snap for authentic sealing wax breaking
+          const bufferSize = Math.floor(ctx.sampleRate * 0.06);
+          const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (ctx.sampleRate * 0.012));
+          }
+          const noise = ctx.createBufferSource();
+          noise.buffer = buffer;
+          const filter = ctx.createBiquadFilter();
+          filter.type = 'bandpass';
+          filter.frequency.setValueAtTime(1600, ctx.currentTime);
+          filter.Q.setValueAtTime(2.5, ctx.currentTime);
+          const gain = ctx.createGain();
+          gain.gain.setValueAtTime(0.3, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(ctx.destination);
+          noise.start();
+
+          // 2. Ascending celebratory harmonic chords
+          const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+          notes.forEach((freq, idx) => {
+            const osc = ctx.createOscillator();
+            const g = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, ctx.currentTime + 0.04 + idx * 0.06);
+            g.gain.setValueAtTime(0.18, ctx.currentTime + 0.04 + idx * 0.06);
+            g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.04 + idx * 0.06 + 0.65);
+            osc.connect(g);
+            g.connect(ctx.destination);
+            osc.start(ctx.currentTime + 0.04 + idx * 0.06);
+            osc.stop(ctx.currentTime + 0.04 + idx * 0.06 + 0.65);
+          });
+        } catch (e) {}
       }
 
       // --- 5. BACKGROUND AUDIO CONTROLLER & VINYL ROTATION ---
+      const heroTonearm = document.getElementById('heroTonearm');
+
       function updateMusicUI(playing) {
         isPlayingMusic = playing;
         if (playing) {
@@ -866,6 +1041,7 @@
           equalizerVisual.classList.remove('equalizer-paused');
           vinylIcon.classList.add('animate-spin-slow');
           heroVinylDisc.classList.add('animate-spin-slow');
+          if (heroTonearm) heroTonearm.classList.add('tonearm-playing');
           heroPlayIcon.classList.remove('fa-play');
           heroPlayIcon.classList.add('fa-pause');
         } else {
@@ -873,6 +1049,7 @@
           equalizerVisual.classList.add('equalizer-paused');
           vinylIcon.classList.remove('animate-spin-slow');
           heroVinylDisc.classList.remove('animate-spin-slow');
+          if (heroTonearm) heroTonearm.classList.remove('tonearm-playing');
           heroPlayIcon.classList.remove('fa-pause');
           heroPlayIcon.classList.add('fa-play');
         }
@@ -1016,7 +1193,7 @@
 
         studentsToRender.forEach(student => {
           const card = document.createElement('div');
-          card.className = 'card-glass rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex flex-col justify-between cursor-pointer group';
+          card.className = 'student-card card-glass rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex flex-col justify-between cursor-pointer group relative overflow-hidden transition-all duration-300';
           card.setAttribute('data-id', student.id);
           card.setAttribute('data-name', student.name);
 
@@ -1024,19 +1201,22 @@
           const formattedId = student.id < 10 ? `#0${student.id}` : `#${student.id}`;
 
           card.innerHTML = `
-            <div>
+            <!-- 3D Sheen Light Reflection Overlay -->
+            <div class="card-sheen"></div>
+
+            <div class="relative z-10">
               <!-- Top Row: Badge & Flower -->
               <div class="flex items-center justify-between mb-3">
-                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-rose-100 text-rose-700 border border-rose-200">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-white/80 text-rose-700 border border-rose-200/90 shadow-sm backdrop-blur-sm">
                   ${formattedId}
                 </span>
-                <span class="text-xl sm:text-2xl group-hover:scale-125 transition-transform duration-300">
+                <span class="text-xl sm:text-2xl group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 drop-shadow-sm">
                   ${student.flower || '🌸'}
                 </span>
               </div>
 
-              <!-- Avatar Glyph Circle -->
-              <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 rounded-full bg-gradient-to-tr from-rose-200 via-pink-100 to-amber-100 border-2 border-white shadow-md flex items-center justify-center text-rose-600 font-serif font-bold text-xl sm:text-2xl group-hover:border-rose-300 group-hover:shadow-rose-200 transition-all">
+              <!-- Avatar Glyph Circle with Luminous Ring -->
+              <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 rounded-full bg-gradient-to-tr from-rose-200 via-pink-100 to-amber-100 border-2 border-white shadow-md flex items-center justify-center text-rose-600 font-serif font-bold text-xl sm:text-2xl group-hover:border-rose-400 group-hover:scale-105 group-hover:shadow-rose-300/50 transition-all duration-300">
                 ${student.shortName ? student.shortName.charAt(0) : '🌸'}
               </div>
 
@@ -1047,24 +1227,44 @@
 
               <!-- Role & Wish Snippet -->
               <div class="text-center mb-4">
-                <span class="text-[10px] sm:text-[11px] font-semibold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-md inline-block">
+                <span class="text-[10px] sm:text-[11px] font-semibold text-rose-600 bg-rose-50/90 border border-rose-200/50 px-2 py-0.5 rounded-md inline-block shadow-sm">
                   Tân Sinh Viên 🎓
                 </span>
-                <p class="text-[11px] text-gray-500 line-clamp-2 mt-1.5 italic font-medium px-1">
+                <p class="text-[11px] text-gray-500 line-clamp-2 mt-2 italic font-medium px-1 leading-relaxed">
                   "${student.wishQuote}"
                 </p>
               </div>
             </div>
 
-            <!-- Card Bottom Action Button -->
-            <button class="w-full bg-gradient-to-r from-rose-500 to-pink-500 group-hover:from-rose-600 group-hover:to-pink-600 text-white font-bold py-2 px-3 rounded-xl text-xs shadow-md group-hover:shadow-rose-300 transition-all flex items-center justify-center gap-1.5">
+            <!-- Card Bottom Action Button with Shimmer -->
+            <button class="relative z-10 w-full btn-shimmer bg-gradient-to-r from-rose-500 to-pink-500 group-hover:from-rose-600 group-hover:to-pink-600 text-white font-bold py-2.5 px-3 rounded-xl text-xs shadow-md group-hover:shadow-lg group-hover:shadow-rose-400/40 transition-all flex items-center justify-center gap-1.5 active:scale-95">
               <span>Mở Thư Riêng</span>
-              <span class="group-hover:translate-x-0.5 transition-transform">💌</span>
+              <span class="group-hover:translate-x-1 transition-transform">💌</span>
             </button>
           `;
 
-          // Card Click Event Handler
+          // 3D Parallax Tilt & Sheen Tracker on Pointer Movement
+          card.addEventListener('pointermove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -8;
+            const rotateY = ((x - centerX) / centerX) * 8;
+
+            card.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px) scale3d(1.02, 1.02, 1.02)`;
+            card.style.setProperty('--sheen-x', `${(x / rect.width) * 100}%`);
+            card.style.setProperty('--sheen-y', `${(y / rect.height) * 100}%`);
+          });
+
+          card.addEventListener('pointerleave', () => {
+            card.style.transform = '';
+          });
+
+          // Card Click Event Handler with Pop Audio
           card.addEventListener('click', () => {
+            playPopSound(950);
             openEnvelopeModal(student, false);
           });
 
@@ -1121,6 +1321,8 @@
       });
 
       // --- 9. 3D ENVELOPE MODAL & PERSONALIZED LETTER LOGIC ---
+      const waxSeal = document.getElementById('waxSeal');
+
       function openEnvelopeModal(student, autoUnfold = false) {
         if (!student || !letterModal) return;
         currentActiveStudent = student;
@@ -1132,7 +1334,8 @@
         letterWishQuote.textContent = `"${student.wishQuote}"`;
         copyBtnText.textContent = `📋 Sao chép link gửi cho ${student.shortName}`;
 
-        // Reset Envelope state to folded
+        // Reset Envelope and Seal state
+        if (waxSeal) waxSeal.classList.remove('seal-crack-anim');
         envelopeShell.classList.remove('hidden', 'envelope-open');
         envelopeShell.style.display = 'block';
         letterSheet.classList.add('hidden', 'opacity-0', 'scale-95');
@@ -1156,35 +1359,59 @@
       function unfoldEnvelopeAndRevealLetter() {
         if (!currentActiveStudent) return;
 
-        // 1. Play crystal chime sound
-        playCrystalChime();
+        // 1. Play realistic wax crack sound + ascending crystal chime
+        playWaxCrackSound();
 
-        // 2. Animate envelope flap open
+        // 2. Animate wax seal fracturing snap
+        if (waxSeal) waxSeal.classList.add('seal-crack-anim');
+
+        // 3. Animate envelope flap open
         envelopeShell.classList.add('envelope-open');
 
-        // 3. Fire Confetti Burst
+        // 4. Fire Grand Two-Stage Confetti Cannon
         if (typeof confetti === 'function') {
+          // Central burst
           confetti({
             particleCount: 80,
-            spread: 70,
-            origin: { y: 0.6 },
-            colors: ['#e11d48', '#fda4af', '#f59e0b', '#ec4899', '#ffffff']
+            spread: 85,
+            origin: { y: 0.55 },
+            colors: ['#e11d48', '#fda4af', '#f59e0b', '#ec4899', '#ffffff'],
+            startVelocity: 38,
+            scalar: 1.15
           });
+
+          // Dual lateral celebratory fireworks
+          setTimeout(() => {
+            confetti({
+              particleCount: 45,
+              angle: 60,
+              spread: 60,
+              origin: { x: 0.05, y: 0.75 },
+              colors: ['#f43f5e', '#ec4899', '#fbbf24', '#ffffff']
+            });
+            confetti({
+              particleCount: 45,
+              angle: 120,
+              spread: 60,
+              origin: { x: 0.95, y: 0.75 },
+              colors: ['#f43f5e', '#ec4899', '#fbbf24', '#ffffff']
+            });
+          }, 180);
         }
 
-        // 4. Auto start background music if not playing yet
+        // 5. Auto start background music if not playing yet
         if (bgAudio && bgAudio.paused) {
           bgAudio.play().then(() => updateMusicUI(true)).catch(() => {});
         }
 
-        // 5. Hide Envelope and show Letter Paper smoothly
+        // 6. Hide Envelope and reveal Letter Paper with Spring Physics
         setTimeout(() => {
           envelopeShell.style.display = 'none';
           letterSheet.classList.remove('hidden');
           setTimeout(() => {
             letterSheet.classList.remove('opacity-0', 'scale-95');
             letterSheet.classList.add('opacity-100', 'scale-100');
-          }, 30);
+          }, 40);
         }, 600);
       }
 
@@ -1201,6 +1428,7 @@
           letterModal.classList.add('hidden');
           envelopeShell.classList.remove('envelope-open');
           envelopeShell.style.display = 'block';
+          if (waxSeal) waxSeal.classList.remove('seal-crack-anim');
           letterSheet.classList.add('hidden');
           currentActiveStudent = null;
         }, 300);
@@ -1412,7 +1640,15 @@
         });
       }
 
-      // --- 15. INITIALIZATION ---
+      // --- 15. AMBIENT MOUSE SPOTLIGHT TRACKER ---
+      if (window.matchMedia('(pointer: fine)').matches) {
+        window.addEventListener('pointermove', (e) => {
+          document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+          document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+        }, { passive: true });
+      }
+
+      // --- 16. INITIALIZATION ---
       renderStudentCards(studentsList);
       handleDeepLinking();
 
